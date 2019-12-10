@@ -1,0 +1,44 @@
+body {
+background: rgb(88, 110, 122);
+margin: 0;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#firstDiv {
+position: relative;
+display: flex;
+height: 40px;
+background: #9900ff;
+justify-content: center;
+align-items: center;
+color: white;
+border-bottom-left-radius: 3px;
+border-bottom-right-radius: 3px;
+box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 10px;
+z-index: 2;
+}
+
+#menyDiv {
+position: relative;
+top: -2px; 
+background: rgb(194, 52, 212);
+width: 200px;
+height: 93vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+border-bottom-right-radius: 5px;
+font-size: x-large;
+box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 10px;
+}
+
+#myPara1 {
+color: white;
+margin: 15px;
+}
+
+#myPara2 {
+color: white;
+margin: 15px;
+}
