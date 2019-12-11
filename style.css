@@ -1,5 +1,5 @@
 body {
-background: rgb(88, 110, 122);
+background: rgb(75, 92, 107);
 margin: 0;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -8,7 +8,7 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 position: relative;
 display: flex;
 height: 40px;
-background: #9900ff;
+background: rgb(115, 15, 195);
 justify-content: center;
 align-items: center;
 color: white;
@@ -21,7 +21,7 @@ z-index: 2;
 #menyDiv {
 position: relative;
 top: -2px; 
-background: rgb(194, 52, 212);
+background: rgb(189, 52, 209);
 width: 200px;
 height: 93vh;
 display: flex;
