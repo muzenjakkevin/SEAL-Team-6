@@ -42,3 +42,14 @@ margin: 15px;
 color: white;
 margin: 15px;
 }
+
+#myForm {
+    position: absolute;
+    top: 100px;
+    left: 300px;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 150px;
+}
+
