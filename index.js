@@ -7,8 +7,8 @@ function init() {
    initUI()
    formInput()
    myWeek()
-   
-} 
+
+}
 
 function initUI() {
    // linking body
@@ -42,11 +42,10 @@ function initUI() {
    myPara2.innerHTML = 'Calendar';
    myPara2.id = 'myPara2';
 
-  /*  let thirdDiv = document.createElement('div');
-   myBody.appendChild(thirdDiv);
-   thirdDiv.id = 'thirdDiv';
- */
-   
+   // Main window div
+   let mainDiv = document.createElement('div');
+   myBody.appendChild(mainDiv);
+   mainDiv.id = 'mainDiv';
 }
 //_____________________________________________________________________________________________________
 //FORMINPUT FUNCTION
@@ -89,7 +88,7 @@ function formInput() {
    submitBtn.style.marginTop = '17px';
    submitBtn.style.width = '100px';
    submitBtn.style.height = '30px';
-   submitBtn.addEventListener('click', function() {
+   submitBtn.addEventListener('click', function () {
       console.log('input')
    });
 }
@@ -102,9 +101,9 @@ function myWeek() {
    myWeek.id = 'myWeek';
    let multiply = 7;
    for (i = 0; i < multiply; i++) {
-   let myDay = document.createElement('div');
-   myWeek.appendChild(myDay);
-   myDay.id = 'myDay'
+      let myDay = document.createElement('div');
+      myWeek.appendChild(myDay);
+      myDay.id = 'myDay'
    }
 }
 // var weekDays = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
