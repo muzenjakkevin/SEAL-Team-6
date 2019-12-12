@@ -39,32 +39,40 @@ z-index: 1;
 }
 
 #mainDiv {
-    position: relative;
-    top: 40px;
-    width: 100vw;
-    height: 93vh;
-    background: rgb(75, 92, 107);
+position: relative;
+top: 40px;
+width: 100vw;
+height: 93vh;
+background: rgb(75, 92, 107);
 }
 
 #myPara1 {
+border: none;
+background: none;
+font-size: large;
+font-weight: bold;
 color: white;
 margin: 15px;
 }
 
 #myPara2 {
+border: none;
+background: none;
+font-size: large;
+font-weight: bold;
 color: white;
 margin: 15px;
 }
 
 #myForm {
-    position: absolute;
-    top: 100px;
-    left: 300px;
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-    height: 150px;
-    color: white;
+position: absolute;
+top: 100px;
+left: 300px;
+display: flex;
+flex-direction: column;
+width: 200px;
+height: 150px;
+color: white;
 }
 
 #myWeek {

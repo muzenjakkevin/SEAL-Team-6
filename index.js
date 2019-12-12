@@ -31,21 +31,28 @@ function initUI() {
    menuDiv.id = 'menyDiv';
 
    // first paragraph
-   let myPara1 = document.createElement('p');
+   let myPara1 = document.createElement('button');
    menuDiv.appendChild(myPara1);
    myPara1.innerHTML = 'New activity';
    myPara1.id = 'myPara1';
+   myPara1.addEventListener('click', function() {
+      console.log('New activity')
+   })
 
    // second paragraph 
-   let myPara2 = document.createElement('p');
+   let myPara2 = document.createElement('button');
    menuDiv.appendChild(myPara2);
    myPara2.innerHTML = 'Calendar';
    myPara2.id = 'myPara2';
+   myPara2.addEventListener('click', function() {
+      console.log('Calendar')
+   })
 
    // Main window div
    let mainDiv = document.createElement('div');
    myBody.appendChild(mainDiv);
    mainDiv.id = 'mainDiv';
+
 }
 //_____________________________________________________________________________________________________
 //FORMINPUT FUNCTION
