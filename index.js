@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
 // call all function here
 function init() {
    initUI()
-   formInput()
    myWeek()
 
 }
@@ -35,10 +34,8 @@ function initUI() {
    menuDiv.appendChild(myPara1);
    myPara1.innerHTML = 'New activity';
    myPara1.id = 'myPara1';
-   myPara1.addEventListener('click', function() {
-      console.log('New activity')
-   })
-
+   myPara1.addEventListener('click', formInput)
+   
    // second paragraph 
    let myPara2 = document.createElement('button');
    menuDiv.appendChild(myPara2);
