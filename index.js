@@ -22,17 +22,19 @@ let menuDiv = document.createElement('div');
 myBody.appendChild(menuDiv)[1];
 menuDiv.id = 'menyDiv';
 
-
 // first paragraph
 let myPara1 = document.createElement('p');
 menuDiv.appendChild(myPara1);
 myPara1.innerHTML = 'New activity';
 myPara1.id = 'myPara1';
 
-
 // second paragraph 
 let myPara2 = document.createElement('p');
 menuDiv.appendChild(myPara2);
 myPara2.innerHTML = 'Calendar';
 myPara2.id = 'myPara2';
+}
+
+function openActivity(){
+   
 }
