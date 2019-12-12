@@ -1,6 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
-   initUI();
+   init();
 });
+
+// call all function here
+function init() {
+   initUI()
+   formInput()
+   myWeek()
+   
+} 
 
 function initUI() {
    // linking body
@@ -8,7 +16,7 @@ function initUI() {
 
    // first div
    let firstDiv = document.createElement('div');
-   myBody.appendChild(firstDiv)[0];
+   myBody.appendChild(firstDiv);
    firstDiv.id = 'firstDiv';
 
    // header
@@ -19,7 +27,7 @@ function initUI() {
 
    // menu div
    let menuDiv = document.createElement('div');
-   myBody.appendChild(menuDiv)[1];
+   myBody.appendChild(menuDiv);
    menuDiv.id = 'menyDiv';
 
    // first paragraph
@@ -34,14 +42,18 @@ function initUI() {
    myPara2.innerHTML = 'Calendar';
    myPara2.id = 'myPara2';
 
-   formInput()
+  /*  let thirdDiv = document.createElement('div');
+   myBody.appendChild(thirdDiv);
+   thirdDiv.id = 'thirdDiv';
+ */
+   
 }
 //_____________________________________________________________________________________________________
-
+//FORMINPUT FUNCTION
 function formInput() {
    let myBody = document.getElementsByTagName('body')[0]; // linked to body for now, change when navigation variables are known
    let myForm = document.createElement('div');
-   myBody.appendChild(myForm)[2];
+   myBody.appendChild(myForm);
    myForm.id = 'myForm';
 
    // New activity input
@@ -81,3 +93,18 @@ function formInput() {
       console.log('input')
    });
 }
+//_____________________________________________________________________________________
+// MYWEEK AND ITS CHILDREN
+function myWeek() {
+   let myBody = document.getElementsByTagName('body')[0]; // linked to body for now, change when navigation variables are known
+   let myWeek = document.createElement('div');
+   myBody.appendChild(myWeek);
+   myWeek.id = 'myWeek';
+   let multiply = 7;
+   for (i = 0; i < multiply; i++) {
+   let myDay = document.createElement('div');
+   myWeek.appendChild(myDay);
+   myDay.id = 'myDay'
+   }
+}
+// var weekDays = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
