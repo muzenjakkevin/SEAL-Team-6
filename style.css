@@ -1,45 +1,51 @@
 body {
-background: rgb(75, 92, 107);
-margin: 0;
-padding: 0;
-font-family: Arial, sans-serif;
+  background: rgb(75, 92, 107);
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
 #firstDiv {
-position: relative;
-display: flex;
-height: 40px;
-background: rgb(115, 15, 195);
-justify-content: center;
-align-items: center;
-color: white;
-border-bottom-left-radius: 3px;
-border-bottom-right-radius: 3px;
-box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 10px;
-z-index: 2;
+  position: relative;
+  display: flex;
+  height: 40px;
+  background: rgb(115, 15, 195);
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 10px;
+  z-index: 2;
 }
 
 #menyDiv {
-position: relative;
-top: -2px; 
-background: rgb(189, 52, 209);
-width: 200px;
-height: 100vh;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-border-bottom-right-radius: 5px;
-font-size: x-large;
-box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 10px;
+  position: relative;
+  top: -2px; 
+  background: rgb(189, 52, 209);
+  width: 200px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom-right-radius: 5px;
+  font-size: x-large;
+  box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 10px;
+}
+
+#calendarPara{
+  color: white;
+  font-size: 42px;
 }
 
 #myPara1 {
-color: white;
-margin: 15px;
+  color: white;
+  margin: 15px;
+  cursor: pointer;
 }
 
 #myPara2 {
-color: white;
-margin: 15px;
-}
+  color: white;
+  margin: 15px;
+  }
