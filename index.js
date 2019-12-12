@@ -36,5 +36,5 @@ myPara2.id = 'myPara2';
 }
 
 function openActivity(){
-   
+   var openNewscreen = null;
 }
