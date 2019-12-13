@@ -122,4 +122,3 @@ function myWeek() {
     myDay.className = 'myDay';
   }
 }
-
