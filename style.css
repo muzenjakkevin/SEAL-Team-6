@@ -3,9 +3,10 @@ body {
   background: rgb(75, 92, 107);
   margin: 0;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  }
-  
-  #firstDiv {
+  overflow: hidden;
+}
+
+#firstDiv {
   position: absolute;
   top: 0px;
   height: 40px;
@@ -19,15 +20,15 @@ body {
   border-bottom-right-radius: 3px;
   box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 10px;
   z-index: 2;
-  }
-  
-  #menyDiv {
+}
+
+#menyDiv {
   position: relative;
   top: 38px;
   left: 0px;
   background: rgb(189, 52, 209);
-  width: 200px;
-  height: 93.5vh;
+  width: 250px;
+  height: 94.8vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,17 +37,17 @@ body {
   font-size: x-large;
   box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 10px;
   z-index: 1;
-  }
-  
-  #mainDiv {
+}
+
+#mainDiv {
   position: relative;
   top: 40px;
   width: 100vw;
   height: 93vh;
   background: rgb(75, 92, 107);
-  }
-  
-  #myPara1 {
+}
+
+#myPara1 {
   border: none;
   cursor: pointer;
   background: none;
@@ -54,18 +55,19 @@ body {
   font-weight: bold;
   color: white;
   margin: 15px;
-  }
-  
-  #myPara2 {
+}
+
+#myPara2 {
   border: none;
+  cursor: pointer;
   background: none;
   font-size: large;
   font-weight: bold;
   color: white;
   margin: 15px;
-  }
-  
-  #myForm {
+}
+
+#myForm {
   position: absolute;
   top: 100px;
   left: 300px;
@@ -74,4 +76,4 @@ body {
   width: 200px;
   height: 150px;
   color: white;
-  }
+}
