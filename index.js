@@ -50,7 +50,6 @@ function initUI() {
   // Main window div
 
 }
-
 //_____________________________________________________________________________________________________
 //FORMINPUT FUNCTION
 
@@ -62,6 +61,7 @@ function formInput() {
    myBody.removeChild(myBody.childNodes[8]);
   }
   myBody.appendChild(myForm);
+
   myForm.id = 'myForm';
 
   // New activity input
@@ -109,6 +109,7 @@ function myWeek() {
   let myBody = document.getElementsByTagName('body')[0]; // linked to body for now, change when navigation variables are known
   let myWeek = document.createElement('div');
   myBody.appendChild(myWeek);
+
   if (myBody.hasChildNodes()) {
     myBody.removeChild(myBody.childNodes[8]);
    }
@@ -117,6 +118,8 @@ function myWeek() {
   for (i = 0; i < multiply; i++) {
     let myDay = document.createElement('div');
     myWeek.appendChild(myDay);
+
     myDay.className = 'myDay';
   }
 }
+
