@@ -48,6 +48,7 @@ background: rgb(75, 92, 107);
 
 #myPara1 {
 border: none;
+cursor: pointer;
 background: none;
 font-size: large;
 font-weight: bold;
@@ -75,10 +76,10 @@ height: 150px;
 color: white;
 }
 
-#myWeek {
-    /* Robin */
+/*#myWeek {
+    Robin
 }
 
 #myDay {
-    /* Robin */
-}
+    Robin 
+}*/
