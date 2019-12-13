@@ -25,8 +25,6 @@ function initUI() {
   myHeader.style.fontFamily = 'Arial';
   myHeader.style.fontSize = '20px';
 
-  
-
   // menu div
   let menuDiv = document.createElement('div');
   myBody.appendChild(menuDiv);
@@ -35,6 +33,7 @@ function initUI() {
   let mainDiv = document.createElement('div');
   myBody.appendChild(mainDiv);
   mainDiv.id = 'mainDiv'
+
 
     // Calendar h3
     let myCalendarHead = document.createElement('h3');
@@ -52,23 +51,23 @@ function initUI() {
    
  
 
+
   // first paragraph
   let myPara1 = document.createElement('button');
   menuDiv.appendChild(myPara1);
   myPara1.innerHTML = 'New activity';
   myPara1.id = 'myPara1';
-  myPara1.addEventListener('click', function() {
-    mainDiv.innerHTML = formInput();
-  });
+
+  myPara1.addEventListener('click', formInput);
+
 
   // second paragraph 
   let myPara2 = document.createElement('button');
   menuDiv.appendChild(myPara2);
   myPara2.innerHTML = 'Calendar';
   myPara2.id = 'myPara2';
-  myPara2.addEventListener('click', function() {
-    mainDiv.innerHTML = myBody;
-  });
+
+  myPara2.addEventListener('click', myWeek);
 
   // Main window div
 
@@ -80,6 +79,12 @@ function formInput() {
   let myBody = document.getElementsByTagName('body')[0]; // linked to body for now, change when navigation variables are known
   let myForm = document.createElement('div');
   myBody.appendChild(myForm);
+
+  if (myBody.hasChildNodes()) {
+   myBody.removeChild(myBody.childNodes[8]);
+  }
+  myBody.appendChild(myForm);
+
   myForm.id = 'myForm';
 
   // New activity input
@@ -119,19 +124,26 @@ function formInput() {
     console.log('input')
   });
 }
+
 //_____________________________________________________________________________________
 // MYWEEK AND ITS CHILDREN
+
 function myWeek() {
   let mainDiv = document.getElementById('mainDiv'); // linked to body for now, change when navigation variables are known
   let myWeek = document.createElement('div');
   mainDiv.appendChild(myWeek);
+
+  if (myBody.hasChildNodes()) {
+    myBody.removeChild(myBody.childNodes[8]);
+   }
+
   myWeek.id = 'myWeek';
   let multiply = 7;
   for (i = 0; i < multiply; i++) {
     let myDay = document.createElement('div');
     myWeek.appendChild(myDay);
-    myDay.id = 'myDay'
+
+    myDay.className = 'myDay';
   }
 }
 
-// var weekDays = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
