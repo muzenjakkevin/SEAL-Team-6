@@ -1,5 +1,12 @@
+var myBody; // linked to body for now, change when navigation variables are known
+var mainDiv;
+var myWeek;
+
 document.addEventListener('DOMContentLoaded', function () {
   init();
+  myBody = document.getElementsByTagName('body')[0];
+  mainDiv = document.createElement('div');
+  myWeek = document.createElement('div');
 });
 
 // call all function here
@@ -68,8 +75,6 @@ function initUI() {
 //FORMINPUT FUNCTION
 
 function formInput() {
-  let myBody = document.getElementsByTagName('body')[0]; // linked to body for now, change when navigation variables are known
-  let mainDiv = document.createElement('div');
   myBody.appendChild(mainDiv);
   if (myBody.hasChildNodes()) {
    myBody.removeChild(myBody.childNodes[8]);
@@ -120,8 +125,6 @@ function formInput() {
 // MYWEEK AND ITS CHILDREN
 
 function myWeek() {
-  let mainDiv = document.getElementById('mainDiv'); // linked to body for now, change when navigation variables are known
-  let myWeek = document.createElement('div');
   mainDiv.appendChild(myWeek);
   if (mainDiv.hasChildNodes()) {
     mainDiv.removeChild(myWeek.childNodes[8]);
@@ -137,4 +140,3 @@ function myWeek() {
     myDay.className = 'myDay';
   }
 }
-
