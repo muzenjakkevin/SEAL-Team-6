@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
 // call all function here
 function init() {
   initUI()
-  myWeek()
 }
 
 function initUI() {
@@ -34,24 +33,18 @@ function initUI() {
   myBody.appendChild(mainDiv);
   mainDiv.id = 'mainDiv'
 
-
-    // Calendar h3
-    let myCalendarHead = document.createElement('h3');
-    mainDiv.appendChild(myCalendarHead);
-    myCalendarHead.innerHTML = 'Calendar';
-    myCalendarHead.id = 'myCalendarHead';
+  // Calendar h3
+  let myCalendarHead = document.createElement('h3');
+  mainDiv.appendChild(myCalendarHead);
+  myCalendarHead.innerHTML = 'Calendar';
+  myCalendarHead.id = 'myCalendarHead';
    
-
-    
-      // 1 Week h3
-      let my1WeekHead = document.createElement('h3');
-      mainDiv.appendChild(my1WeekHead);
-      my1WeekHead.innerHTML = '1 Week';
-      my1WeekHead.id = 'my1WeekHead';
+  // 1 Week h3
+  let my1WeekHead = document.createElement('h3');
+  mainDiv.appendChild(my1WeekHead);
+  my1WeekHead.innerHTML = '1 Week';
+  my1WeekHead.id = 'my1WeekHead';
    
- 
-
-
   // first paragraph
   let myPara1 = document.createElement('button');
   menuDiv.appendChild(myPara1);
@@ -59,7 +52,6 @@ function initUI() {
   myPara1.id = 'myPara1';
 
   myPara1.addEventListener('click', formInput);
-
 
   // second paragraph 
   let myPara2 = document.createElement('button');
@@ -79,7 +71,6 @@ function formInput() {
   let myBody = document.getElementsByTagName('body')[0]; // linked to body for now, change when navigation variables are known
   let myForm = document.createElement('div');
   myBody.appendChild(myForm);
-
   if (myBody.hasChildNodes()) {
    myBody.removeChild(myBody.childNodes[8]);
   }
@@ -132,12 +123,12 @@ function myWeek() {
   let mainDiv = document.getElementById('mainDiv'); // linked to body for now, change when navigation variables are known
   let myWeek = document.createElement('div');
   mainDiv.appendChild(myWeek);
-
-  if (myBody.hasChildNodes()) {
-    myBody.removeChild(myBody.childNodes[8]);
+  if (mainDiv.hasChildNodes()) {
+    mainDiv.removeChild(myBody.childNodes[8]);
    }
-
+  mainDiv.appendChild(myWeek);
   myWeek.id = 'myWeek';
+
   let multiply = 7;
   for (i = 0; i < multiply; i++) {
     let myDay = document.createElement('div');
