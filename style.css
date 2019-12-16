@@ -40,6 +40,7 @@ z-index: 1;
 
 #mainDiv {
 position: relative;
+display: flex;
 top: 40px;
 width: 100vw;
 height: 93vh;
@@ -66,9 +67,9 @@ margin: 15px;
 }
 
 #myForm {
-position: absolute;
-top: 100px;
-left: 300px;
+position: relative;
+top: 10px;
+left: 15px;
 display: flex;
 flex-direction: column;
 width: 200px;
@@ -77,40 +78,29 @@ color: white;
 }
 
 #myCalendarHead {
-    color: white;
-    left: 120px;
-    top: 30px;
-    position: absolute;
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
+color: white;
+left: 120px;
+position: absolute;
+font-weight: lighter;
+font-size: 30px;
+font-family: Arial, Helvetica, sans-serif;
 }
 
 #my1WeekHead {
-    color: white;
-    left: 600px;
-    top: 30px;
-    position: absolute;
-    font-size: 30px;
-    
+color: white;
+left: 500px;
+position: absolute;
+font-size: 30px;
 }
 
-#myWeek {
-    width: 1360px;
-    height: 680px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    position: relative;
-    left: 10px;
-    
-}
-
-#myDay {
-    width: 145px;
-    height: 400px;
-    background: white;
-    margin: 20px;
-    display: flex;
-    justify-content: flex-start;
-    border-radius: 5px;
+.myDay {
+position: relative;
+top: 110px;
+width: 120px;
+height: 350px;
+background: white;
+margin-left: 30px;
+display: flex;
+justify-content: flex-start;
+border-radius: 5px;
 }
