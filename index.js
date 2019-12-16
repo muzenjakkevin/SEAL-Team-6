@@ -69,14 +69,14 @@ function initUI() {
 
 function formInput() {
   let myBody = document.getElementsByTagName('body')[0]; // linked to body for now, change when navigation variables are known
-  let myForm = document.createElement('div');
-  myBody.appendChild(myForm);
+  let mainDiv = document.createElement('div');
+  myBody.appendChild(mainDiv);
   if (myBody.hasChildNodes()) {
    myBody.removeChild(myBody.childNodes[8]);
   }
-  myBody.appendChild(myForm);
+  myBody.appendChild(mainDiv);
 
-  myForm.id = 'myForm';
+  mainDiv.id = 'myForm';
 
   // New activity input
   var inputText1 = document.createElement('p');
@@ -124,7 +124,7 @@ function myWeek() {
   let myWeek = document.createElement('div');
   mainDiv.appendChild(myWeek);
   if (mainDiv.hasChildNodes()) {
-    mainDiv.removeChild(myBody.childNodes[8]);
+    mainDiv.removeChild(myWeek.childNodes[8]);
    }
   mainDiv.appendChild(myWeek);
   myWeek.id = 'myWeek';
