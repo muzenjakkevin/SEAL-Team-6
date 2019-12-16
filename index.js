@@ -79,9 +79,8 @@ function formInput() {
   let myBody = document.getElementsByTagName('body')[0]; // linked to body for now, change when navigation variables are known
   let myForm = document.createElement('div');
   myBody.appendChild(myForm);
-
   if (myBody.hasChildNodes()) {
-   myBody.removeChild(myBody.childNodes[8]);
+    myBody.removeChild(myBody.childNodes[8]);
   }
   myBody.appendChild(myForm);
 
