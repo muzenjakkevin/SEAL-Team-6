@@ -1,6 +1,7 @@
 function aWeek() {
   if (mainDiv.hasChildNodes()) {
     mainDiv.removeChild(myForm)
+    mainDiv.removeChild(myFormHeader)
   }
   // Calendar h3
   let completeWeek = document.createElement('div')

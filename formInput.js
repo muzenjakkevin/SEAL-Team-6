@@ -4,6 +4,12 @@ function formInput() {
     mainDiv.removeChild(my1WeekHead)
     mainDiv.removeChild(completeWeek)
   }
+  //New header
+  let myFormHeader = document.createElement('h3')
+  mainDiv.appendChild(myFormHeader);
+  myFormHeader.innerHTML = 'New activity'
+  myFormHeader.id = 'myFormHeader'
+
   // Create new Container for input objects
   let myForm = document.createElement('div')
   mainDiv.appendChild(myForm);
