@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
   init();
-});
+})
 
 // call all function here
 function init() {
-  initUI()
+  initUI();
 }
 
 function initUI() {
@@ -46,5 +46,5 @@ function initUI() {
   // new div for all main-content 
   var mainDiv = document.createElement('div');
   myBody.appendChild(mainDiv);
-  mainDiv.id = 'mainDiv'
+  mainDiv.id = 'mainDiv';
 }

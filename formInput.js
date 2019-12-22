@@ -1,17 +1,17 @@
 function formInput() {
   if (mainDiv.hasChildNodes()) {
-    mainDiv.removeChild(myCalendarHead)
-    mainDiv.removeChild(my1WeekHead)
-    mainDiv.removeChild(completeWeek)
+    mainDiv.removeChild(myCalendarHead);
+    mainDiv.removeChild(my1WeekHead);
+    mainDiv.removeChild(completeWeek);
   }
   //New header
-  let myFormHeader = document.createElement('h3')
+  let myFormHeader = document.createElement('h3');
   mainDiv.appendChild(myFormHeader);
-  myFormHeader.innerHTML = 'New activity'
-  myFormHeader.id = 'myFormHeader'
+  myFormHeader.innerHTML = 'New activity';
+  myFormHeader.id = 'myFormHeader';
 
   // Create new Container for input objects
-  let myForm = document.createElement('div')
+  let myForm = document.createElement('div');
   mainDiv.appendChild(myForm);
   myForm.id = 'myForm';
 
@@ -23,10 +23,13 @@ function formInput() {
   var inputActivity = document.createElement('input');
   myForm.appendChild(inputActivity);
   inputActivity.type = 'text';
-  inputActivity.value = 'sample'
+  inputActivity.value = 'New task'
   inputActivity.name = 'New activity:';
   inputActivity.style.width = '166px';
   inputActivity.className = 'input';
+  inputActivity.addEventListener('click', function() {
+    inputActivity.value = '';
+  })
 
   // New activity date input
   var inputText2 = document.createElement('p');
@@ -36,11 +39,11 @@ function formInput() {
   var inputDate = document.createElement('input');
   myForm.appendChild(inputDate);
   inputDate.type = 'text';
-  inputDate.value = day + ' ' + date + ', ' + month;
+  inputDate.value = day + ' ' + date + '/' + month;
   inputDate.name = 'Date:';
   inputDate.style.width = '166px';
   inputDate.className = 'input';
-  inputDate.addEventListener('click', function () {
+  inputDate.addEventListener('click', function() {
     inputDate.value = '';
   })
 
@@ -52,11 +55,14 @@ function formInput() {
   submitBtn.style.marginTop = '17px';
   submitBtn.style.width = '100px';
   submitBtn.style.height = '30px';
-  submitBtn.addEventListener('click', function () {
-    var showInput = 'Activity: ' + inputActivity.value + ' Date: ' + inputDate.value;
+  submitBtn.addEventListener('click', function() {
+    var showInput = 'Activity: ' + inputActivity.value + '<br>' + ' Date: ' + inputDate.value;
     console.log(showInput);
-  });
-
+    var newActivity = document.createElement('div');
+    mainDiv.appendChild(newActivity);
+    newActivity.innerHTML = showInput;
+    newActivity.className = 'newActivity';
+  })
   myPara1.removeEventListener('click', formInput);
   myPara2.addEventListener('click', aWeek);
 }
