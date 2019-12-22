@@ -93,6 +93,14 @@ position: absolute;
 font-size: 30px;
 }
 
+#completeWeek {
+position: relative;
+display: flex;
+width: 100%;
+height: 100%;
+background: rgb(75, 92, 107);
+}
+
 .myDay {
 position: relative;
 top: 110px;
