@@ -56,12 +56,21 @@ function formInput() {
   submitBtn.style.width = '100px';
   submitBtn.style.height = '30px';
   submitBtn.addEventListener('click', function () {
-    var showInput = 'Activity: ' + inputActivity.value + '<br>' + ' Date: ' + inputDate.value;
+    inputActivity.focus()
+    var showInput = 'Activity: ' + inputActivity.value + '<br>' + ' Date: ' + inputDate.value + '<br>';
     console.log(showInput);
     var newActivity = document.createElement('div');
     mainDiv.appendChild(newActivity);
     newActivity.innerHTML = showInput;
     newActivity.className = 'newActivity';
+    delActivity = document.createElement('button')
+    newActivity.appendChild(delActivity)
+    delActivity.innerHTML = 'Delete Activity';
+    delActivity.style.position = 'relative'
+    delActivity.style.right = '0px';
+    delActivity.addEventListener('click', function(){
+      mainDiv.removeChild(newActivity)
+    false})
   })
   myPara1.removeEventListener('click', formInput);
   myPara2.addEventListener('click', aWeek);

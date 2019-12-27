@@ -17,7 +17,10 @@ function login() {
     loginBtn.style.color = 'white'
     loginBtn.style.height = '30px';
     loginBtn.addEventListener('click', function () {
-        myLogin.style.display = 'none';
+        userInput.style.borderColor = 'white';
+        passwordInput.style.borderColor = 'white';
+        checkForm()
+        loginrefBtn.addEventListener('click', login)
     })
 
     // New password-input
@@ -28,6 +31,7 @@ function login() {
     passwordInput.name = 'password:';
     passwordInput.style.width = '166px';
     passwordInput.className = 'input';
+    passwordInput.style.borderColor = 'white';
     passwordInput.addEventListener('click', function () {
         passwordInput.value = '';
     })
@@ -45,6 +49,7 @@ function login() {
     userInput.name = 'e-mail';
     userInput.style.width = '166px';
     userInput.className = 'input';
+    userInput.style.borderColor = 'white';
     userInput.addEventListener('click', function () {
         userInput.value = '';
     })
@@ -52,4 +57,35 @@ function login() {
     userText.innerHTML = 'E-mail:';
     userText.style.margin = '0';
     myLogin.appendChild(userText);
+
+    loginrefBtn.removeEventListener('click', login)
+
+    function checkForm() {
+        atSign = /[@]/
+        if (!atSign.test(userInput.value)) {
+            alert("Error: email has to consist of a @!");
+            userInput.focus();
+            userInput.style.borderColor = 'red';
+            return false;
+        }
+        needNumber = /[0-9]/;
+        if (!needNumber.test(passwordInput.value)) {
+            alert("Error: password must consist of atleast 1 letter & 1 character!");
+            passwordInput.focus();
+            passwordInput.style.borderColor = 'red';
+            return false;
+        }
+        needNumber = /[a-z]/;
+        if (!needNumber.test(passwordInput.value)) {
+            alert("Error: password must consist of atleast 1 letter & 1 character!");
+            passwordInput.focus();
+            return false;
+        }
+        acceptedUsers = /[json]/;
+        if (!acceptedUsers.test(userInput.value)) {
+            alert("Welcome user!");
+            passwordInput.focus();
+            return true;
+        }
+    }
 }
