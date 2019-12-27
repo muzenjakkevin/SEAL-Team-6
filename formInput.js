@@ -27,7 +27,7 @@ function formInput() {
   inputActivity.name = 'New activity:';
   inputActivity.style.width = '166px';
   inputActivity.className = 'input';
-  inputActivity.addEventListener('click', function() {
+  inputActivity.addEventListener('click', function () {
     inputActivity.value = '';
   })
 
@@ -43,7 +43,7 @@ function formInput() {
   inputDate.name = 'Date:';
   inputDate.style.width = '166px';
   inputDate.className = 'input';
-  inputDate.addEventListener('click', function() {
+  inputDate.addEventListener('click', function () {
     inputDate.value = '';
   })
 
@@ -55,7 +55,7 @@ function formInput() {
   submitBtn.style.marginTop = '17px';
   submitBtn.style.width = '100px';
   submitBtn.style.height = '30px';
-  submitBtn.addEventListener('click', function() {
+  submitBtn.addEventListener('click', function () {
     var showInput = 'Activity: ' + inputActivity.value + '<br>' + ' Date: ' + inputDate.value;
     console.log(showInput);
     var newActivity = document.createElement('div');

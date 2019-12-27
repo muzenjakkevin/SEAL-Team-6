@@ -24,6 +24,13 @@ function initUI() {
   myHeader.style.fontFamily = 'Arial';
   myHeader.style.fontSize = '20px';
 
+  // LoginRef-button
+  var loginrefBtn = document.createElement('button');
+  myHeader.appendChild(loginrefBtn);
+  loginrefBtn.id = 'loginrefBtn'
+  loginrefBtn.innerHTML = 'Login';
+  loginrefBtn.addEventListener('click', login)
+
   // menu div
   let menuDiv = document.createElement('div');
   myBody.appendChild(menuDiv);
