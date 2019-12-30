@@ -27,7 +27,7 @@ function formInput() {
   inputActivity.name = 'New activity:';
   inputActivity.style.width = '166px';
   inputActivity.className = 'input';
-  inputActivity.addEventListener('click', function() {
+  inputActivity.addEventListener('click', function () {
     inputActivity.value = '';
   })
 
@@ -43,7 +43,7 @@ function formInput() {
   inputDate.name = 'Date:';
   inputDate.style.width = '166px';
   inputDate.className = 'input';
-  inputDate.addEventListener('click', function() {
+  inputDate.addEventListener('click', function () {
     inputDate.value = '';
   })
 
@@ -55,13 +55,22 @@ function formInput() {
   submitBtn.style.marginTop = '17px';
   submitBtn.style.width = '100px';
   submitBtn.style.height = '30px';
-  submitBtn.addEventListener('click', function() {
-    var showInput = 'Activity: ' + inputActivity.value + '<br>' + ' Date: ' + inputDate.value;
+  submitBtn.addEventListener('click', function () {
+    inputActivity.focus()
+    var showInput = 'Activity: ' + inputActivity.value + '<br>' + ' Date: ' + inputDate.value + '<br>';
     console.log(showInput);
     var newActivity = document.createElement('div');
     mainDiv.appendChild(newActivity);
     newActivity.innerHTML = showInput;
     newActivity.className = 'newActivity';
+    delActivity = document.createElement('button')
+    newActivity.appendChild(delActivity)
+    delActivity.innerHTML = 'Delete Activity';
+    delActivity.style.position = 'relative'
+    delActivity.style.right = '0px';
+    delActivity.addEventListener('click', function(){
+      mainDiv.removeChild(newActivity)
+    false})
   })
   myPara1.removeEventListener('click', formInput);
   myPara2.addEventListener('click', aWeek);

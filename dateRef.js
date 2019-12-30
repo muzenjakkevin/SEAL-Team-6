@@ -1,7 +1,6 @@
 var d = new Date();
 console.log(d);
 var date = d.getDate();
-console.log(d.getDay());
 
 //day
 var dayRef = new Array;
@@ -13,7 +12,6 @@ dayRef[4] = 'Thu';
 dayRef[5] = 'Fri';
 dayRef[6] = 'Sat';
 var day = dayRef[d.getDay()];
-console.log(day);
 
 //month
 var monthRef = new Array;
@@ -30,7 +28,6 @@ monthRef[9] = '10';
 monthRef[10] = '11';
 monthRef[11] = '12';
 var month = monthRef[d.getMonth()];
-console.log(month);
 
-var show = (day + ' ' + date + ', ' + month);
+var show = (day + ' ' + date + '/' + month);
 console.log(show);

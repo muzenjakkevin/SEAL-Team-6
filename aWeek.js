@@ -18,8 +18,12 @@ function aWeek() {
   mainDiv.appendChild(my1WeekHead);
   my1WeekHead.innerHTML = '1 Week';
   my1WeekHead.id = 'my1WeekHead';
-  
-  for (i = 0; i < dayRef.length; date++, i++) {
+
+  // Renewed dateref in function to stop date from wandering after first trigger
+  var date = d.getDate()
+
+  // New divs for weekdays
+  for (i = 0; i < dayRef.length; date++ , i++) {
     let myDay = document.createElement('div');
     completeWeek.appendChild(myDay);
     myDay.innerHTML = dayRef[i] + '<br>' + date + '/' + month;

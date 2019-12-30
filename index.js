@@ -9,7 +9,7 @@ function init() {
 
 function initUI() {
   // linking body
-  let myBody = document.getElementsByTagName('body')[0];
+  let myBody = document.body;
 
   // first div
   let firstDiv = document.createElement('div');
@@ -23,6 +23,13 @@ function initUI() {
   myHeader.style.margin = '0';
   myHeader.style.fontFamily = 'Arial';
   myHeader.style.fontSize = '20px';
+
+  // LoginRef-button
+  var loginrefBtn = document.createElement('button');
+  myHeader.appendChild(loginrefBtn);
+  loginrefBtn.id = 'loginrefBtn'
+  loginrefBtn.innerHTML = 'Login';
+  loginrefBtn.addEventListener('click', login)
 
   // menu div
   let menuDiv = document.createElement('div');
