@@ -81,10 +81,10 @@ function login() {
             passwordInput.focus();
             return false;
         }
-        acceptedUsers = /[json]/;
+        acceptedUsers = fetch('https://jsonplaceholder.typicode.com/users/');
         if (!acceptedUsers.test(userInput.value)) {
             alert("Welcome user!");
-            passwordInput.focus();
+            userInput.focus();
             return true;
         }
     }

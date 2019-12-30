@@ -154,7 +154,7 @@ padding: 20px;
 flex-direction: column-reverse;
 width: 170px;
 height: 300px;
-background: linear-gradient(150deg, white, rgb(115, 15, 195) 90%);
+background: linear-gradient(150deg, white 41%, rgb(115, 15, 195) 100%);
 border-bottom-left-radius: 3px;
 border-bottom-right-radius: 3px;
 color: black;

@@ -9,7 +9,7 @@ function init() {
 
 function initUI() {
   // linking body
-  let myBody = document.getElementsByTagName('body')[0];
+  let myBody = document.body;
 
   // first div
   let firstDiv = document.createElement('div');
